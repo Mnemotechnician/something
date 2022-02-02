@@ -1,0 +1,25 @@
+name: you
+on: push
+
+jobs:
+  main:
+    name: you
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Build
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+      
+      - name: idk I can't compile it on my 32 bit system
+        run: ls -a app/build/**
+      
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: amogus
+          path: app/build/outputs
