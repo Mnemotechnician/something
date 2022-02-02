@@ -10,7 +10,7 @@ repositories {
 }
 
 android {
-	compileSdkVersion(libs.versions.compile.sdk.version.get().toInt())
+	compileSdkVersion("30.0.3")
 
 	defaultConfig {
 		minSdkVersion(libs.versions.min.sdk.version.get().toInt())
@@ -25,11 +25,11 @@ android {
 		viewBinding = true
 	}
 	compileOptions {
-		sourceCompatibility = JavaVersion.VERSION_11
-		targetCompatibility = JavaVersion.VERSION_11
+		sourceCompatibility = JavaVersion.VERSION_8
+		targetCompatibility = JavaVersion.VERSION_8
 	}
 	kotlinOptions {
-		jvmTarget = JavaVersion.VERSION_11.toString()
+		jvmTarget = JavaVersion.VERSION_8.toString()
 	}
 	buildTypes {
 		getByName("release") {
