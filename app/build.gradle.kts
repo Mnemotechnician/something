@@ -56,6 +56,7 @@ dependencies {
 	implementation("com.github.Anuken.Arc:arc-core:$arcHash")
 	implementation("com.github.Anuken.Arc:natives-android:$arcHash")
 	implementation("com.github.Anuken.Arc:backend-android:$arcHash")
+	implementation("com.github.Anuken.Arc:natives-freetype-android:$arcHash")
 
 	/*
 	testImplementation(libs.junit)
