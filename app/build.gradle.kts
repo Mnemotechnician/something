@@ -10,7 +10,7 @@ repositories {
 }
 
 android {
-	compileSdkVersion("30.0.3")
+	compileSdkVersion(libs.versions.compile.sdk.version.get().toInt())
 
 	defaultConfig {
 		minSdkVersion(libs.versions.min.sdk.version.get().toInt())
