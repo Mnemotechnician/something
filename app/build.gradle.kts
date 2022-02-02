@@ -25,11 +25,11 @@ android {
 		viewBinding = true
 	}
 	compileOptions {
-		sourceCompatibility = JavaVersion.VERSION_8
-		targetCompatibility = JavaVersion.VERSION_8
+		sourceCompatibility = JavaVersion.VERSION_1_8
+		targetCompatibility = JavaVersion.VERSION_1_8
 	}
 	kotlinOptions {
-		jvmTarget = JavaVersion.VERSION_8.toString()
+		jvmTarget = "1.8"
 	}
 	buildTypes {
 		getByName("release") {
