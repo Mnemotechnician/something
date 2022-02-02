@@ -5,12 +5,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ncorti.kotlin.template.app.databinding.ActivityMainBinding
-import com.ncorti.kotlin.template.library.FactorialCalculator
-import com.ncorti.kotlin.template.library.android.NotificationUtil
 
 class MainActivity : AppCompatActivity() {
 
-	private val notificationUtil: NotificationUtil by lazy { NotificationUtil(this) }
 	private lateinit var binding: ActivityMainBinding
 
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +18,11 @@ class MainActivity : AppCompatActivity() {
 		binding.buttonCompute.setOnClickListener {
 			if (binding.editTextFactorial.text.isNotEmpty()) {
 				val input = binding.editTextFactorial.text.toString().toInt()
-				val result = FactorialCalculator.computeFactorial(input).toString()
+				val result = input.let {
+					var i = 1
+					for (i in 1..it) i *= i
+					i
+				}
 
 				binding.textResult.text = result
 				binding.textResult.visibility = View.VISIBLE

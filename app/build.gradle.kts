@@ -3,6 +3,10 @@ plugins {
 	kotlin("android")
 }
 
+repositories {
+	maven("https://jitpack.io")
+}
+
 android {
 	compileSdkVersion(libs.versions.compile.sdk.version.get().toInt())
 
@@ -55,6 +59,8 @@ dependencies {
 	implementation(libs.androidx.appcompat)
 	implementation(libs.androidx.constraint.layout)
 	implementation(libs.androidx.core.ktx)
+	
+	implementation("com.github.Anuken.Arc:arc-core:v135")
 
 	/*
 	testImplementation(libs.junit)
