@@ -1,4 +1,4 @@
-package com.github.mnemotechnician.game.android
+package com.github.mnemotechnician.game
 
 import android.os.Bundle
 import android.widget.Toast
