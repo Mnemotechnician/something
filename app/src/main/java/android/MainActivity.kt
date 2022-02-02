@@ -8,11 +8,10 @@ import com.github.mnemotechnician.game.*
 class MainActivity : AndroidApplication() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		
 		try {
+			super.onCreate(savedInstanceState)
 			initialize(ApplicationLauncher())
-		} catch (e: Exception) {
+		} catch (e: Throwable) {
 			Toast.makeText(this, e.stackTraceToString(), Toast.LENGTH_LONG).show()  
 		}
 	}
