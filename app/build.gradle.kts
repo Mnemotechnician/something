@@ -40,29 +40,21 @@ android {
 			)
 		}
 	}
-
-	// Use this block to configure different flavors
-//	flavorDimensions("version")
-//	productFlavors {
-//		create("full") {
-//			dimension = "version"
-//			applicationIdSuffix = ".full"
-//		}
-//		create("demo") {
-//			dimension = "version"
-//			applicationIdSuffix = ".demo"
-//		}
-//	}
 }
+
+val arcHash = "b139bee16f"
 
 dependencies {
 	implementation(kotlin("stdlib-jdk8"))
 
+	/*
 	implementation(libs.androidx.appcompat)
 	implementation(libs.androidx.constraint.layout)
 	implementation(libs.androidx.core.ktx)
+	*/
 	
-	implementation("com.github.Anuken.Arc:arc-core:v135")
+	implementation("com.github.Anuken.Arc:arc-core:$arcHash")
+	implementation("com.github.Anuken.Arc:natives-android:$arcHash")
 
 	/*
 	testImplementation(libs.junit)

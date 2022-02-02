@@ -1,8 +1,3 @@
 <resources>
     <string name="app_name">Trying</string>
-    <string name="title">Yay</string>
-    <string name="description">Ten sussy amogi jumping on the bed. One fell off and killed the rest</string>
-    <string name="factorial_hint">Insert a number to compute its factorial</string>
-    <string name="compute">Compute</string>
-    <string name="notification_title">The Result is:</string>
 </resources>
