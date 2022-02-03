@@ -14,14 +14,14 @@ class MainActivity : android.app.Activity() {
 			
 			Thread.setDefaultUncaughtExceptionHandler(object : Thread.UncaughtExceptionHandler {
 				override fun uncaughtException(t: Thread, exception: Throwable) {
-					Toast.makeText(this@MainActivity, exception.stackTraceToString(), Toast.LENGTH_LONG).show()	
+					showToast(exception.stackTraceToString())
 				}
 			});
 			
 			//launch our activity
 			startActivity(Intent(this, GameActivity::class.java))
 		} catch (e: Throwable) {
-			Toast.makeText(this, e.stackTraceToString(), Toast.LENGTH_LONG).show()
+			showToast(e.stackTraceToString())
 		}
 	}
 	
@@ -30,8 +30,12 @@ class MainActivity : android.app.Activity() {
 		override fun onCreate(savedInstanceState: Bundle?) {
 			super.onCreate(savedInstanceState)
 			initialize(ApplicationLauncher())
+			
+			showToast("initialized!")
 		}
 		
 	}
+	
+	fun showToast(text: String) = Toast.makeText(this, text, Toast.LENGTH_LONG).show();
 	
 }
