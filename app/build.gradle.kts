@@ -10,11 +10,11 @@ repositories {
 }
 
 android {
-	compileSdkVersion(libs.versions.compile.sdk.version.get().toInt())
+	compileSdkVersion(30)//libs.versions.compile.sdk.version.get().toInt())
 
 	defaultConfig {
-		minSdkVersion(libs.versions.min.sdk.version.get().toInt())
-		targetSdkVersion(libs.versions.target.sdk.version.get().toInt())
+		minSdkVersion(14)
+		targetSdkVersion(30)
 
 		applicationId = "com.github.mnemotechnician.game"
 		versionCode = 1
