@@ -5,12 +5,12 @@ import android.widget.Toast
 import arc.backend.android.AndroidApplication
 import com.github.mnemotechnician.game.*
 
-class MainActivity : AndroidApplication() {
+class MainActivity : android.app.Activity() {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		try {
 			super.onCreate(savedInstanceState)
-			initialize(ApplicationLauncher())
+			//initialize(ApplicationLauncher())
 		} catch (e: Throwable) {
 			Toast.makeText(this, e.stackTraceToString(), Toast.LENGTH_LONG).show()  
 		}
