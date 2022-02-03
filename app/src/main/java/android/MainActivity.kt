@@ -31,9 +31,8 @@ class MainActivity : android.app.Activity() {
 		
 		override fun onCreate(savedInstanceState: Bundle?) {
 			super.onCreate(savedInstanceState)
-			initialize(ApplicationLauncher())
-			
 			Toast.makeText(this, "initialized", Toast.LENGTH_LONG).show();
+			initialize(ApplicationLauncher())
 		}
 		
 	}
