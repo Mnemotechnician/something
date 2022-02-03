@@ -1,4 +1,4 @@
-package com.github.mnemotechnician.game
+package com.github.mnemotechnician.game.android
 
 import android.os.Bundle
 import android.widget.Toast
@@ -25,17 +25,17 @@ class MainActivity : android.app.Activity() {
 		}
 	}
 	
+	fun showToast(text: String) = Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+	
 	class GameActivity : AndroidApplication() {
 		
 		override fun onCreate(savedInstanceState: Bundle?) {
 			super.onCreate(savedInstanceState)
 			initialize(ApplicationLauncher())
 			
-			showToast("initialized!")
+			Toast.makeText(this, "initialized", Toast.LENGTH_LONG).show();
 		}
 		
 	}
-	
-	fun showToast(text: String) = Toast.makeText(this, text, Toast.LENGTH_LONG).show();
 	
 }
