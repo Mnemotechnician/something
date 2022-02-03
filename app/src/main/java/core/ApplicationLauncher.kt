@@ -3,7 +3,7 @@ package com.github.mnemotechnician.game
 import arc.*
 import arc.util.*
 import arc.scene.*
-import arc.scens.ui.layout.*
+import arc.scene.ui.layout.*
 import arc.assets.*
 import arc.graphics.*
 import arc.graphics.g2d.*
@@ -18,12 +18,12 @@ class ApplicationLauncher : ApplicationCore() {
 		Log.info("Using @ Context", if (Core.gl30 != null) "OpenGL 3" else "OpenGL 2");
 		
 		Core.assets = AssetManager();
-        	batch = SortedSpriteBatch();
+        	Core.batch = SortedSpriteBatch();
 		Core.camera = Camera();
 		Core.batch = SortedSpriteBatch();
 		Core.atlas = TextureAtlas.blankAtlas();
 		
-		Core.scene.root.fill { it: Table
+		Core.scene.root.fill { it: Table ->
 			it.left().top().add("AMOGUS")
 		}
 	}
