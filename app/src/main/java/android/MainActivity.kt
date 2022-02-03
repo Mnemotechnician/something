@@ -14,7 +14,7 @@ class MainActivity : android.app.Activity() {
 			
 			Thread.setDefaultUncaughtExceptionHandler(object : Thread.UncaughtExceptionHandler {
 				override fun uncaughtException(t: Thread, exception: Throwable) {
-					Toast.makeText(this@onCreate, exception.stackTraceToString(), Toast.LENGTH_LONG).show()	
+					Toast.makeText(this@MainActivity, exception.stackTraceToString(), Toast.LENGTH_LONG).show()	
 				}
 			});
 			
